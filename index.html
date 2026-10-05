@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of Rahul Deshmukh" />
+  <title>Rahul Deshmukh | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="Rahul Deshmukh home">RD</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">&#9776;</button>
+      <nav id="primaryNav" class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1 id="hero-title">Rahul Deshmukh</h1>
+        <p class="lead">Junior full stack developer building clean, accessible and responsive web experiences.</p>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">About</h2>
+        <p>
+          I am a developer who enjoys turning ideas into simple, usable web pages. I care about
+          semantic HTML, readable code and interfaces that work well on every screen size.
+          Currently I am extending my skills with CSS layout, vanilla JavaScript and Node.js/Express.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title">Skills</h2>
+        <ul class="skills-list" role="list">
+          <li>HTML5</li>
+          <li>CSS3 (Flexbox &amp; Grid)</li>
+          <li>Vanilla JavaScript</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>Git &amp; GitHub</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title">Projects</h2>
+        <div class="gallery">
+          <article class="card">
+            <h3>Landing Page</h3>
+            <p>A responsive marketing landing page built with semantic HTML5 and CSS Grid.</p>
+            <span class="tag">HTML5</span> <span class="tag">CSS3</span>
+          </article>
+          <article class="card">
+            <h3>Task Tracker</h3>
+            <p>A small to-do application with filtering and persistence using vanilla JavaScript.</p>
+            <span class="tag">JavaScript</span> <span class="tag">DOM</span>
+          </article>
+          <article class="card">
+            <h3>Notes API</h3>
+            <p>A minimal REST API with Express that stores and returns notes in memory.</p>
+            <span class="tag">Node.js</span> <span class="tag">Express</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt" aria-labelledby="contact-title">
+      <div class="container narrow">
+        <h2 id="contact-title">Contact</h2>
+        <form id="contactForm" novalidate aria-describedby="formStatus">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="nameError" />
+            <span class="error" id="nameError" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="emailError" />
+            <span class="error" id="emailError" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required aria-describedby="messageError"></textarea>
+            <span class="error" id="messageError" role="alert"></span>
+          </div>
+          <button type="submit" class="btn" id="submitBtn">Send message</button>
+          <p id="formStatus" class="status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Rahul Deshmukh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
